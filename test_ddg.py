@@ -72,8 +72,8 @@ for string in text_list:
         president_list.append(string)
 #print(president_list)
 
-#for string in president_list:
-#    assert any(x in string for x in president_list)
+for string in president_list:
+    assert any(x in string for x in president_list)
 #testing = 'Jimmy Carter Lincoln Jefferson'
 #assert any(x in testing for x in test_list)
 
