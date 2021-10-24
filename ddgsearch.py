@@ -18,7 +18,7 @@ text_list = []
 for topic in related_topics_list:
     text_list.append(topic['Text'])
 
-test_list = {
+test_list = [
     'Washington',
     'Adams',
     'Jefferson',
@@ -62,7 +62,19 @@ test_list = {
     'Obama',
     'Trump',
     'Biden'
-}
+]
 
+president_list = []
 for string in text_list:
-    assert any(x in test_list for x in string)
+    #print(string)
+    #assert any(x in string for x in test_list)
+    if any(x in string for x in test_list):
+        president_list.append(string)
+#print(president_list)
+
+for string in president_list:
+    assert any(x in string for x in president_list)
+#testing = 'Jimmy Carter Lincoln Jefferson'
+#assert any(x in testing for x in test_list)
+
+#assert any(x in text_list[0] for x in test_list)
